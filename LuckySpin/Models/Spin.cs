@@ -11,21 +11,21 @@ namespace LuckySpin.Models
         public int Luck
         {
             get { return luck; }
-            set { }
+            set { luck = value; }
         }
 
         //TODO: Create public getters for Random numbers, refernencing their instance variable
         public int A {
             get
             {
-
+                a = random.Next(0, 10);
                 return a;
             }
         }
         public int B {
             get
             {
-
+                b = random.Next(0, 10);
                 return b;
             }
         }
@@ -33,7 +33,7 @@ namespace LuckySpin.Models
         {
             get
             {
-
+                c = random.Next(0, 10);
                 return c;
             }
         }
@@ -43,7 +43,15 @@ namespace LuckySpin.Models
         {
             get
             {
-                return  "block";
+                if (A == Luck || B == Luck || C == Luck)
+                {
+                    return "block";
+                } 
+                else
+                {
+                    return "none";
+                }
+              
             }
         }
     }
