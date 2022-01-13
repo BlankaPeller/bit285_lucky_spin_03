@@ -43,7 +43,7 @@ namespace LuckySpin.Models
         {
             get
             {
-                if (A == Luck || B == Luck || C == Luck)
+                if (a == luck || b == luck || c == luck)
                 {
                     return "block";
                 } 
